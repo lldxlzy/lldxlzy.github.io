@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>获取用户位置并下载ISO文件</title>
+    <script>
+        // 获取用户位置
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(saveLocation);
+            } else {
+                alert("抱歉，您的浏览器不支持地理位置获取。");
+            }
+        }
+
+        // 存储位置到数据库并生成下载ISO文件链接
+        function saveLocation(position) {
+            // 假设这里是存储到数据库的后端处理代码
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            const userLocation = { latitude: latitude, longitude: longitude };
+
+            // 创建下载链接
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "lingmo.iso";
+            a.click();
+        }
+    </script>
+</head>
+<body>
+    <h1>test</h1>
+    <button onclick="getLocation()">click!!!please!!!</button>
+</body>
+</html>
