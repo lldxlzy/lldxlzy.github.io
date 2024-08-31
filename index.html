@@ -1,20 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>lingmo download test</title>
-    <script>
-       function download(){
-            const url = "file"
-            const a = document.createElement("a");
-            a.href = url;
-            a.download = "这只是一个测试文件";
-            a.click();
-        }
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跳转页面</title>
+    <meta http-equiv="refresh" content="0; url=html/index.html">
 </head>
 <body>
-    <h1>lingmo 测试通道（下载页）</h1>
-    <button onclick="download()">直接点我就完事了</button>
+    <p>如果没有自动跳转，请<a href="html/index.html">点击这里</a>.</p>
 </body>
 </html>
